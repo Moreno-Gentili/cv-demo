@@ -1,0 +1,63 @@
+﻿<models:BaseStep x:Class="OpenCVDemo.Steps.BlobDetection"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:models="clr-namespace:OpenCVDemo.Models"
+             xmlns:components="clr-namespace:OpenCVDemo.Components"
+             mc:Ignorable="d" 
+             Padding="0 5"
+             d:DesignHeight="300" d:DesignWidth="200">
+    <Grid VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Label Padding="0" Margin="0 10 0 0" Grid.Row="0" Grid.Column="0">MIN AREA</Label>
+        <components:NumericStepper Margin="0 0 4 0" FontSize="18" Step="10" Grid.Row="1" Grid.Column="0" Minimum="{Binding AreaMinimum}" Maximum="{Binding AreaMaximum}" Value="{Binding MinArea, Mode=TwoWay}" />
+
+        <Label Padding="0" Margin="0 10 0 0" Grid.Row="0" Grid.Column="1">MAX AREA</Label>
+        <components:NumericStepper Margin="0" FontSize="18" Step="10" Grid.Row="1" Grid.Column="1" Minimum="{Binding AreaMinimum}" Maximum="{Binding AreaMaximum}" Value="{Binding MaxArea, Mode=TwoWay}" />
+
+
+        <Label Padding="0" Margin="0 10 0 0" Grid.Row="2" Grid.Column="0">MIN CIRCULARITY</Label>
+        <components:NumericStepper Margin="0 0 4 0" FontSize="18" Step="10" Grid.Row="3" Grid.Column="0" Minimum="{Binding CircularityMinimum}" Maximum="{Binding CircularityMaximum}" Value="{Binding MinCircularity, Mode=TwoWay}" />
+
+        <Label Padding="0" Margin="0 10 0 0" Grid.Row="2" Grid.Column="1">MAX CIRCULARITY</Label>
+        <components:NumericStepper Margin="0" FontSize="18" Step="10" Grid.Row="3" Grid.Column="1" Minimum="{Binding CircularityMinimum}" Maximum="{Binding CircularityMaximum}" Value="{Binding MaxCircularity, Mode=TwoWay}" />
+
+
+        <Label Padding="0" Margin="0 10 0 0" Grid.Row="4" Grid.Column="0">MIN CONVEXITY</Label>
+        <components:NumericStepper Margin="0 0 4 0" FontSize="18" Step="10" Grid.Row="5" Grid.Column="0" Minimum="{Binding ConvexityMinimum}" Maximum="{Binding ConvexityMaximum}" Value="{Binding MinConvexity, Mode=TwoWay}" />
+
+        <Label Padding="0" Margin="0 10 0 0" Grid.Row="4" Grid.Column="1">MAX CONVEXITY</Label>
+        <components:NumericStepper Margin="0" FontSize="18" Step="10" Grid.Row="5" Grid.Column="1" Minimum="{Binding ConvexityMinimum}" Maximum="{Binding ConvexityMaximum}" Value="{Binding MaxConvexity, Mode=TwoWay}" />
+
+
+        <Label Padding="0" Margin="0 10 0 0" Grid.Row="6" Grid.Column="0">MIN INERTIA</Label>
+        <components:NumericStepper Margin="0 0 4 0" FontSize="18" Step="10" Grid.Row="7" Grid.Column="0" Minimum="{Binding InertiaMinimum}" Maximum="{Binding InertiaMaximum}" Value="{Binding MinInertia, Mode=TwoWay}" />
+
+        <Label Padding="0" Margin="0 10 0 0" Grid.Row="6" Grid.Column="1">MAX INERTIA</Label>
+        <components:NumericStepper Margin="0" FontSize="18" Step="10" Grid.Row="7" Grid.Column="1" Minimum="{Binding InertiaMinimum}" Maximum="{Binding InertiaMaximum}" Value="{Binding MaxInertia, Mode=TwoWay}" />
+
+        <Label Padding="0" Margin="0 10 0 0" Grid.Row="8" Grid.Column="0">MIN THRESHOLD</Label>
+        <components:NumericStepper Margin="0 0 4 0" FontSize="18" Step="1" Grid.Row="9" Grid.Column="0" Minimum="{Binding ThresholdMinimum}" Maximum="{Binding ThresholdMaximum}" Value="{Binding MinThreshold, Mode=TwoWay}" />
+
+        <Label Padding="0" Margin="0 10 0 0" Grid.Row="8" Grid.Column="1">MAX THRESHOLD</Label>
+        <components:NumericStepper Margin="0" FontSize="18" Step="1" Grid.Row="9" Grid.Column="1" Minimum="{Binding ThresholdMinimum}" Maximum="{Binding ThresholdMaximum}" Value="{Binding MaxThreshold, Mode=TwoWay}" />
+
+    </Grid>
+</models:BaseStep>

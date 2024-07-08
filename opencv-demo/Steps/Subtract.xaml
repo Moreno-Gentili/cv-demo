@@ -1,0 +1,20 @@
+﻿<models:BaseStep x:Class="OpenCVDemo.Steps.Subtract"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:models="clr-namespace:OpenCVDemo.Models"
+             mc:Ignorable="d"
+             d:DesignHeight="200" d:DesignWidth="200">
+    <Grid Visibility="Collapsed">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Slider x:Name="SubtractThreshold" Grid.Column="0" Minimum="0" Maximum="255" Value="0" Margin="0 0 0 4" AutoToolTipPlacement="TopLeft"></Slider>
+        <Slider x:Name="SubtractAmount" Grid.Column="1" Minimum="0" Maximum="255" Value="10" Margin="0 0 0 4" AutoToolTipPlacement="TopLeft"></Slider>
+    </Grid>
+</models:BaseStep>

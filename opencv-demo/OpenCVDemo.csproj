@@ -1,0 +1,105 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+	<SelfContained>True</SelfContained>
+	<PublishSingleFile>True</PublishSingleFile>
+	<EnableDefaultApplicationDefinition>false</EnableDefaultApplicationDefinition>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Components\GeneticProgress.xaml" />
+    <None Remove="Components\HoldButton.xaml" />
+    <None Remove="Components\NumericStepper.xaml" />
+    <None Remove="Content\BarlowCondensed-Regular.ttf" />
+    <None Remove="Content\Dataset\01.jpg" />
+    <None Remove="Content\Dataset\01.jpg.txt" />
+    <None Remove="Content\Dataset\02.jpg" />
+    <None Remove="Content\Dataset\02.jpg.txt" />
+    <None Remove="Content\Dataset\03.jpg" />
+    <None Remove="Content\Dataset\03.jpg.txt" />
+    <None Remove="Content\Dataset\04.jpg" />
+    <None Remove="Content\Dataset\04.jpg.txt" />
+    <None Remove="Content\icon-adaptive-threshold.png" />
+    <None Remove="Content\icon-blob-detection.png" />
+    <None Remove="Content\icon-canny-edge.png" />
+    <None Remove="Content\icon-contour.png" />
+    <None Remove="Content\icon-grayscale.png" />
+    <None Remove="Content\icon-morph.png" />
+    <None Remove="Content\icon-subtract.png" />
+    <None Remove="Content\icon-threshold.png" />
+    <None Remove="opencv.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Content\BarlowCondensed-Regular.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Dataset\01.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Dataset\01.jpg.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Dataset\02.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Dataset\02.jpg.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Dataset\03.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Dataset\03.jpg.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Dataset\04.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Dataset\04.jpg.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\icon-adaptive-threshold.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\icon-blob-detection.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\icon-canny-edge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\icon-contour.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\icon-grayscale.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\icon-morph.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\icon-subtract.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\icon-threshold.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\opencv-logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+    <PackageReference Include="FluentWPF" Version="0.10.2" />
+    <PackageReference Include="GeneticSharp" Version="3.1.4" />
+    <PackageReference Include="gong-wpf-dragdrop" Version="3.2.1" />
+    <PackageReference Include="OpenCvSharp4" Version="4.9.0.20240103" />
+    <PackageReference Include="OpenCvSharp4.runtime.win" Version="4.9.0.20240103" />
+    <PackageReference Include="Wpf.Extensions.Hosting" Version="1.2.0" />
+  </ItemGroup>
+
+</Project>

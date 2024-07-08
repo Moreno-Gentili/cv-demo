@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="OpenCVDemo.Components.NumericStepper"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:OpenCVDemo.Components"
+             mc:Ignorable="d" 
+             Padding="0"
+             Margin="0"
+             d:DesignHeight="40" d:DesignWidth="120">
+    <DockPanel Margin="0" LastChildFill="True" Background="#fff">
+        <Button Width="24" Height="24" Margin="0 0 2 0" Padding="0" DockPanel.Dock="Right" Background="Transparent" BorderThickness="0" PreviewMouseDown="StartAdding" PreviewMouseUp="StopAdding">
+            <Label VerticalContentAlignment="Center" Margin="0 0 0 3" FontFamily="Consolas" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center">+</Label>
+        </Button>
+        <Button Width="24" Height="24" Padding="0" DockPanel.Dock="Right" Background="Transparent" BorderThickness="0" PreviewMouseDown="StartSubtracting" PreviewMouseUp="StopSubtracting">
+            <Label VerticalContentAlignment="Center" FontFamily="Consolas" Margin="0" Padding="0">─</Label>
+        </Button>
+        <Label Content="{Binding Value, RelativeSource={RelativeSource AncestorType=UserControl}, Mode=OneWay}" BorderThickness="0">
+            <Label.Style>
+                <Style TargetType="Label">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#bee6fd"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Label.Style>
+        </Label>
+    </DockPanel>
+</UserControl>

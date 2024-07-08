@@ -1,0 +1,25 @@
+﻿{
+  "model": "gpt-4o",
+  "max_tokens": 4096,
+  "temperature": {{temperature}},
+  "response_format": { "type": "{{response_format}}" },
+  "messages": [
+    {
+      "role": "system",
+      "content": "{{system}}"
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "image_url",
+          "image_url": { "url": "data:image/jpeg;base64,{{file}}" }
+        },
+        {
+          "type": "text",
+          "text": "{{user}}"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="OpenCVDemo.Components.Labeler"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="200">
+    <Grid>
+        <Rectangle StrokeThickness="2" Stroke="Black"></Rectangle>
+        <Ellipse x:Name="NW" Cursor="SizeNWSE" MouseDown="NW_StartDragging" MouseUp="StopDragging" Width="20" Height="20" Fill="White" Stroke="Black" StrokeThickness="2" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="-10"></Ellipse>
+        <Ellipse x:Name="NE" Cursor="SizeNESW" MouseDown="NE_StartDragging" MouseUp="StopDragging" Width="20" Height="20" Fill="White" Stroke="Black" StrokeThickness="2" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="-10"></Ellipse>
+        <Ellipse x:Name="SW" Cursor="SizeNESW" MouseDown="SW_StartDragging" MouseUp="StopDragging" Width="20" Height="20" Fill="White" Stroke="Black" StrokeThickness="2" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="-10"></Ellipse>
+        <Ellipse x:Name="SE" Cursor="SizeNWSE" MouseDown="SE_StartDragging" MouseUp="StopDragging" Width="20" Height="20" Fill="White" Stroke="Black" StrokeThickness="2" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="-10"></Ellipse>
+    </Grid>
+</UserControl>

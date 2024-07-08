@@ -1,0 +1,22 @@
+﻿<Button x:Class="OpenCVDemo.Components.StepMenuItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:OpenCVDemo.Components"
+             mc:Ignorable="d" 
+             BorderThickness="0"
+             Background="Transparent"
+             d:DesignHeight="60" d:DesignWidth="60">
+    <Button.Content>
+        <Grid Height="70" Width="70">
+            <Image Source="{Binding RelativeSource={RelativeSource AncestorType=local:StepMenuItem, Mode=FindAncestor}, Path=Icon}" Width="35" Height="35" VerticalAlignment="Top" Margin="0 6 0 0"></Image>
+            <TextBlock LineHeight="12" LineStackingStrategy="BlockLineHeight" TextWrapping="Wrap" Text="{Binding RelativeSource={RelativeSource AncestorType=local:StepMenuItem, Mode=FindAncestor}, Path=Text}" VerticalAlignment="Center" Margin="0 36 0 0" TextAlignment="Center" />
+        </Grid>
+    </Button.Content>
+    <Button.Resources>
+        <Style TargetType="Border">
+            <Setter Property="CornerRadius" Value="10" />
+        </Style>
+    </Button.Resources>
+</Button>
