@@ -52,7 +52,7 @@
         <Border Grid.Row="1" Grid.ColumnSpan="3" Padding="10">
             <Grid>
                 <Button HorizontalAlignment="Left" Background="Transparent" FontSize="16" BorderThickness="0" Padding="4" VerticalAlignment="Center" Command="{Binding BrowseCommand}">Sfoglia...</Button>
-                <Label HorizontalAlignment="Right" Padding="0" VerticalAlignment="Center" Content="{Binding Cost}" ContentStringFormat="Costo: {0:0.000} USD" FontSize="20" Visibility="{Binding Cost, Converter={StaticResource ObjectToVisibility}}"></Label>
+                <Label HorizontalAlignment="Right" Padding="0" VerticalAlignment="Center" Content="{Binding Cost}" ContentStringFormat="Costo: {0:0.0000} USD" FontSize="20" Visibility="{Binding Cost, Converter={StaticResource ObjectToVisibility}}"></Label>
                 <Button Background="#0091dc" Foreground="White" FontSize="20" BorderThickness="0" HorizontalAlignment="Center" Padding="10" Content="Invia richiesta" Command="{Binding SendRequestCommand}">
                     <Button.Resources>
                         <Style TargetType="Border">
