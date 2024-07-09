@@ -42,8 +42,8 @@ public class OpenAIClient(HttpClient client)
 
             return (message,
                 Math.Max(0.001m,
-                0.03m * completionTokens / 1000m +
-                0.01m * promptTokens / 1000m));
+                0.015m * completionTokens / 1000m +
+                0.005m * promptTokens / 1000m));
         }
         catch (Exception ex)
         {
