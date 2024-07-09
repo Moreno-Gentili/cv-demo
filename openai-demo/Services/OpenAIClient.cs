@@ -41,7 +41,7 @@ public class OpenAIClient(HttpClient client)
             int completionTokens = doc.RootElement.GetProperty("usage").GetProperty("completion_tokens").GetInt32();
 
             return (message,
-                Math.Max(0.001m,
+                Math.Max(0.0001m,
                 15m * completionTokens / 1_000_000m +
                 5m * promptTokens / 1_000_000m));
         }
